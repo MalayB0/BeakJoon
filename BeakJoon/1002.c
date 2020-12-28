@@ -18,31 +18,25 @@ int main() {
 	scanf("%d", &testCase);
 	int** case1 = (int*)calloc(testCase, sizeof(int*));
 	int** case2 = (int*)calloc(testCase, sizeof(int*));
-	
+
 	for (int i = 0; i < testCase; i++) {
-		*(case1 + i) = (int*)calloc(testCase, sizeof(int));
-		*(case2 + i) = (int*)calloc(testCase, sizeof(int));
+		
+		*(case1 + i) = (int*)calloc(3, sizeof(int));
+		*(case2 + i) = (int*)calloc(3, sizeof(int));
+		
 		for (int j = 0; j < 6; j++) {
-			if (j < 3) scanf("%d", case1[i][j]);
-			else scanf("%d", case2[i][j]);
+			if (j < 3) scanf("%d", &case1[i][j]);
+			else scanf("%d", &case2[i][j]);
+		}
 	}
 
-	
-	for (int i = 0; i < testCase; i++) {
-		//for (int j = 0; j < 6; j++) {
-		//	printf("%d", cnt[i * 6 + j]);
-		//}
 
-		if (case1[][]) {
-			printf("-1");
+	for (int i = 0;  i < testCase ; i++) {
+		for (int j = 0; j < 6; j++) {
+			if (j < 3) printf("%d", case1[i][j]);
+			else printf("%d", case2[i][j]);
 		}
-		
-
 		printf("\n");
 	}
-
-
-	free(cnt);
-
 	return 0;
 }
