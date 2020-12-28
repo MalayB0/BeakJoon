@@ -20,33 +20,26 @@ int main() {
 	int origin;
 	scanf("%d", &origin);
 	
-	int newNum, oldNum;
-	newNum = origin;
-	oldNum = origin;
-
+	int newNum = origin;
 	int cnt = 0;
-
+	
 	if (0 <= origin && origin < 100) {
 
 		while (1) {
 
 			if (0 <= newNum && newNum < 10) {
 				newNum = newNum * 11;
-				oldNum = newNum;
 				cnt++;
 			}
 
 			else {
 				newNum = (newNum % 10 * 10) + ((newNum / 10 + newNum % 10) % 10);
-				oldNum = newNum;
 				cnt++;
 			}
-
 
 			if (newNum == origin) {
 				break;
 			}
-
 		}
 	}
 

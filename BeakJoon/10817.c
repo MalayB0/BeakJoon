@@ -21,9 +21,7 @@ void printMid() {
 				ary[j+1] = ary[j];
 				ary[j] = temp;	
 			}
-			
 		}
-
 	}
 
 	for (int i = 0; i < sizeof(ary) / sizeof(int); i++) {
@@ -31,9 +29,5 @@ void printMid() {
 	}
 
 	printf("\n%d\n", ary[1]);
-
-
-
-
 
 }

@@ -22,7 +22,6 @@ int main() {
 		for (int j = 0; j < 6; j++) {
 			scanf("%d", cnt + i*6 + j);
 		}
-		
 	}
 
 
