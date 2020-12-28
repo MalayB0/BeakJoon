@@ -20,6 +20,7 @@ int main() {
 	int origin;
 	scanf("%d", &origin);
 	
+
 	int newNum = origin;
 	int cnt = 0;
 	

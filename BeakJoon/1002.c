@@ -16,16 +16,30 @@ r1, r2는 10,000보다 작거나 같은 자연수이다.*/
 int main() {
 	int testCase;
 	scanf("%d", &testCase);
-	int* cnt = (int*)calloc(testCase * 6, sizeof(int));
+	int** case1 = (int*)calloc(testCase, sizeof(int*));
+	int** case2 = (int*)calloc(testCase, sizeof(int*));
 	
 	for (int i = 0; i < testCase; i++) {
+		*(case1 + i) = (int*)calloc(testCase, sizeof(int));
+		*(case2 + i) = (int*)calloc(testCase, sizeof(int));
 		for (int j = 0; j < 6; j++) {
-			scanf("%d", cnt + i*6 + j);
-		}
+			if (j < 3) scanf("%d", case1[i][j]);
+			else scanf("%d", case2[i][j]);
 	}
 
+	
+	for (int i = 0; i < testCase; i++) {
+		//for (int j = 0; j < 6; j++) {
+		//	printf("%d", cnt[i * 6 + j]);
+		//}
 
+		if (case1[][]) {
+			printf("-1");
+		}
+		
 
+		printf("\n");
+	}
 
 
 	free(cnt);
