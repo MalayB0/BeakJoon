@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BeakJoon", "BeakJoon\BeakJoon.vcxproj", "{2AA2A719-E2C8-44F2-B97E-404411483BAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AA2A719-E2C8-44F2-B97E-404411483BAE}.Debug|x64.ActiveCfg = Debug|x64
+		{2AA2A719-E2C8-44F2-B97E-404411483BAE}.Debug|x64.Build.0 = Debug|x64
+		{2AA2A719-E2C8-44F2-B97E-404411483BAE}.Debug|x86.ActiveCfg = Debug|Win32
+		{2AA2A719-E2C8-44F2-B97E-404411483BAE}.Debug|x86.Build.0 = Debug|Win32
+		{2AA2A719-E2C8-44F2-B97E-404411483BAE}.Release|x64.ActiveCfg = Release|x64
+		{2AA2A719-E2C8-44F2-B97E-404411483BAE}.Release|x64.Build.0 = Release|x64
+		{2AA2A719-E2C8-44F2-B97E-404411483BAE}.Release|x86.ActiveCfg = Release|Win32
+		{2AA2A719-E2C8-44F2-B97E-404411483BAE}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {050EAC59-5A93-41E8-A9EE-2296306FF5CF}
+	EndGlobalSection
+EndGlobal
