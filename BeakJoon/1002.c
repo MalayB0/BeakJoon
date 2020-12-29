@@ -1,18 +1,18 @@
 /*
-Á¶±ÔÇöÀÇ ÁÂÇ¥ (x1, y1)¿Í ¹é½ÂÈ¯ÀÇ ÁÂÇ¥ (x2, y2)°¡ ÁÖ¾îÁö°í
-Á¶±ÔÇöÀÌ °è»êÇÑ ·ùÀç¸í°úÀÇ °Å¸® r1°ú ¹é½ÂÈ¯ÀÌ °è»êÇÑ ·ùÀç¸í°úÀÇ °Å¸® r2°¡ ÁÖ¾îÁ³À» ¶§
-·ùÀç¸íÀÌ ÀÖÀ» ¼ö ÀÖ´Â ÁÂÇ¥ÀÇ ¼ö¸¦ Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+ì¡°ê·œí˜„ì˜ ì¢Œí‘œ (x1, y1)ì™€ ë°±ìŠ¹í™˜ì˜ ì¢Œí‘œ (x2, y2)ê°€ ì£¼ì–´ì§€ê³ 
+ì¡°ê·œí˜„ì´ ê³„ì‚°í•œ ë¥˜ìž¬ëª…ê³¼ì˜ ê±°ë¦¬ r1ê³¼ ë°±ìŠ¹í™˜ì´ ê³„ì‚°í•œ ë¥˜ìž¬ëª…ê³¼ì˜ ê±°ë¦¬ r2ê°€ ì£¼ì–´ì¡Œì„ ë•Œ
+ë¥˜ìž¬ëª…ì´ ìžˆì„ ìˆ˜ ìžˆëŠ” ì¢Œí‘œì˜ ìˆ˜ë¥¼ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 
-ÀÔ·Â
-Ã¹Â° ÁÙ¿¡ Å×½ºÆ® ÄÉÀÌ½ºÀÇ °³¼ö T°¡ ÁÖ¾îÁø´Ù. °¢ Å×½ºÆ® ÄÉÀÌ½º´Â ´ÙÀ½°ú °°ÀÌ ÀÌ·ç¾îÁ® ÀÖ´Ù.
-ÇÑ ÁÙ¿¡ x1, y1, r1, x2, y2, r2°¡ ÁÖ¾îÁø´Ù.
-x1, y1, x2, y2´Â -10,000º¸´Ù Å©°Å³ª °°°í, 10,000º¸´Ù ÀÛ°Å³ª °°Àº Á¤¼öÀÌ°í
-r1, r2´Â 10,000º¸´Ù ÀÛ°Å³ª °°Àº ÀÚ¿¬¼öÀÌ´Ù.*/
+ìž…ë ¥
+ì²«ì§¸ ì¤„ì— í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ê°œìˆ˜ Tê°€ ì£¼ì–´ì§„ë‹¤. ê° í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ëŠ” ë‹¤ìŒê³¼ ê°™ì´ ì´ë£¨ì–´ì ¸ ìžˆë‹¤.
+í•œ ì¤„ì— x1, y1, r1, x2, y2, r2ê°€ ì£¼ì–´ì§„ë‹¤.
+x1, y1, x2, y2ëŠ” -10,000ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê³ , 10,000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ì •ìˆ˜ì´ê³ 
+r1, r2ëŠ” 10,000ë³´ë‹¤ ìž‘ê±°ë‚˜ ê°™ì€ ìžì—°ìˆ˜ì´ë‹¤.*/
 
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-
+int bigger(int a, int b);
 int main() {
 	int testCase;
 	scanf("%d", &testCase);
@@ -29,14 +29,51 @@ int main() {
 			else scanf("%d", &case2[i][j]);
 		}
 	}
+	
+	for (int i = 0; i < testCase; i++) {
+		
+		if ((case1[i][0] == case2[i][0]) &&
+			(case1[i][1] == case2[i][1]) &&
+			(case1[i][2] == case2[i][2])) {
+			printf("%d",-1);
+		}
+		// inner circle
+		else if (sqrt((case1[i][0] - case1[i][0])^2 +
+					  (case1[i][1] - case1[i][1])^2)
+				< bigger(case1[i][2], case1[i][2])) {
+			printf("inner");
+		}
+		else {
+			printf("outter");
+		}
+
+	}
+	
+
 
 
 	for (int i = 0;  i < testCase ; i++) {
 		for (int j = 0; j < 6; j++) {
-			if (j < 3) printf("%d", case1[i][j]);
-			else printf("%d", case2[i][j]);
+			if (j < 3) printf("%-2d", case1[i][j]);
+			else printf("%-2d", case2[i][j]);
 		}
 		printf("\n");
 	}
+
+
+
+
+	for (int i = 0; i < testCase; i++) {
+		free(case1[i]);
+		free(case2[i]);
+	}
+	free (case1);
+	free (case2);
+	
 	return 0;
+}
+
+int bigger(int a , int b) {
+	if (a > b) return a;
+	else return b;
 }
